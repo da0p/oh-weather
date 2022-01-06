@@ -1,0 +1,22 @@
+{
+    "sysConfig": {
+        "pollingInterval": "300000",
+        "developmentMode": 1,
+        "timeZone": "CET-1CEST,M3.5.0,M10.5.0/3",
+        "wifiSSID": "WIFI-SSID",
+        "wifiPassphrase": "WIFI-PASSWORD",
+        "apSSID": "Oh-Weather",
+        "apPassphrase": "12345678"
+    },
+    "weatherRequest": {
+        "requestPlatform": "openweathermap",
+        "apiEndpoint": "https://api.openweathermap.org/data/2.5/weather",
+        "requestApiKey": "OPENWEATHERMAP-API-KEY",
+        "cityName": "Milan",
+        "cityId": "",
+        "zipCode": "",
+        "stateCode": "",
+        "countryCode": "",
+        "coordinates" : {"latitude": "", "longitude": ""}
+    }
+}

@@ -1,0 +1,24 @@
+menu "Weather Station Configuration"
+
+    config OH_WEATHER_RESET_GPIO
+        int "GPIO TO PUT ESP32 in AP mode"
+        default 0
+        help
+            Specify the pin to put esp32 in AP mode
+
+    choice OH_WEATHER_DEPLOY_MODE
+        prompt "Website deploy mode"
+        default OH_WEATHER_WEB_DEPLOY_SF
+        help
+            Select website deploy mode.
+            You can deploy website to host, and ESP32 will retrieve them in a semihost way (JTAG is needed).
+            You can deploy website to SD card or SPI flash, and ESP32 will retrieve them via SDIO/SPI interface.
+            Detailed operation steps are listed in the example README file.
+        config OH_WEATHER_WEB_DEPLOY_SF
+            bool "Deploy website to SPI Nor Flash"
+            help
+                Deploy website to SPI Nor Flash.
+                Choose this production mode if the size of website is small (less than 2MB).
+    endchoice
+
+endmenu
